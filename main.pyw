@@ -1,6 +1,6 @@
 import sys
 import traceback
-print("main_resolve.pyw started", flush=True)
+print("main.pyw started", flush=True)
 import psutil
 from pypresence import Presence
 import time
