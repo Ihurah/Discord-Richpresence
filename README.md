@@ -11,14 +11,34 @@
   **Download ZIP** からダウンロードし、好きな場所に配置。
 
 ### 2. ライブラリの準備
-  コマンドラインより、PythonからWindowsのウィンドウ情報を取得し、Discordへ送信するために以下のライブラリをインストールします。
+  ダウンロードしたフォルダのコマンドラインより、PythonからWindowsのウィンドウ情報を取得し、Discordへ送信するために以下のライブラリをインストールします。
 
       pip install pypresence pywin32 psutil
 
-### 3. 自動起動の設定手順
- `Win + R` で**ファイル名で指定して実行**を起動、 **`shell:startup`** と入力し、表示されたスタートアップフォルダに **silent_start.vbsのショートカット** を移動させます。
+### 2. Discord Developer Portalなどの設定
+   #### 2.1 <a href="https://discord.com/developers/applications">Discord Developer Portal</a>にアクセス  
+  
+   New Application > アクティビティに表示するソフト名を入力 > Create でアプリを作成
+    
+  
+   #### 2.2 アクティビティに表示するソフトアイコンを設定
+  
+   Rich Presence > Rich Presence Assets > Add Image(s) より1024px × 1024pxの画像をアップロード
 
-### 4. 実行
+   #### 2.3 Application IDをコピペ
+   General Information > Application IDをコピー > ダウンロードしたmain.pywの `CLIENT_ID` にペースト
+   
+   #### 2.4 各種設定
+   タスクマネージャー > 詳細 で拡張子付きのソフト名を確認 > `TARGET_PROCESS` にコピー（例：Code.exe）
+
+   `DETAILS` を書き換え、表示する詳細テキストを追加。（例：Coding...）  
+
+   
+
+### 4. 自動起動の設定手順
+ `Win + R` で**ファイル名で指定して実行**を起動、 **`shell:startup`** と入力し、表示されたスタートアップフォルダに **silent_start.vbs のショートカット** を移動させます。
+
+### 5. 実行
 PCを再起動し、動作をテストします。
 
 
