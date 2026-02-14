@@ -5,7 +5,7 @@ import psutil
 from pypresence import Presence, DiscordNotFound, InvalidPipe
 
 CLIENT_ID = 'Discord Developer Portalで作成したアプリのApplication ID'
-TARGET_PROCESS = 'アクティビティに表示したいソフト（拡張子付き）' # タスクマネージャー > 詳細 で確認
+TARGET_PROCESS = 'アクティビティに表示したいソフト（拡張子付き）'
 DETAILS = '表示するテキスト'
 
 def get_active_process_name():
@@ -67,4 +67,5 @@ def main():
             time.sleep(5)
 
 if __name__ == '__main__':
+
     main()
